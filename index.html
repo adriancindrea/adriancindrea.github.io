@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Antagonist Festival</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>  
+  
+  .navbar-brand,
+  .navbar-nav {
+      display: flex;
+      justify-content: center;
+  }
+  .navbar-scroll .navbar-brand,
+  .navbar-scroll .nav-link,
+  .navbar-scroll .fa-bars {
+      color: #fff !important;
+  }         
+  .navbar{
+    margin:auto;
+  }
+  
+  .navbar-brand {
+    letter-spacing: 3px;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    margin:auto;
+  }
+  .navbar-scroll .navbar-brand,
+  .navbar-scroll .nav-link,
+  .navbar-scroll .fa-bars {
+    color: #fff;
+  }
+  
+  .navbar-scroll {
+    box-shadow: none;
+  }
+  .navbar-scrolled .navbar-brand,
+  .navbar-scrolled .nav-link,
+  .navbar-scrolled .fa-bars {
+    color: #4f4f4f;
+  }
+  
+  .navbar-scrolled {
+    background-color: #fff;
+  }
+  .nav-item {
+    font-size: 30px;
+  }
+  .nav-link{
+    text-shadow: black;
+  }
+  .nav>li {
+    position: center;
+    display:block;  }  
+.navbar {
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); 
+}
+.logo-container {
+    position: relative;
+}
+
+.logo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%);
+    border-radius: 100%;
+    pointer-events: none;
+    z-index: -1; 
+}
+body {
+    background-image: url('audience5edited.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Fixed background */
+    color: #ffffff;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+  .content {
+     padding: 50px;
+  }
+
+  h1{
+    text-align: center;
+  }
+  h2{
+    font-size: 50px;
+  }
+  h3{
+    color: rgb(105, 127, 141);
+  }
+  .container {
+    max-width: 1200px;
+ }
+
+.col-sm-4 {
+   margin-bottom: 20px;
+}      
+.row {
+   justify-content: center;
+}
+p {
+   margin-bottom: 20px;
+}
+.black-footer {
+    background-color: black;
+    color: white; 
+  }
+  .social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.social-btn:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.facebook {
+    color: #1877f2; 
+}
+
+.twitter {
+    color: #1da1f2; 
+}
+
+.instagram {
+    color: #e4405f; 
+}
+
+  .map-container {
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+    height:400px;
+  }
+
+  .map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .card {
+      border:none;
+      padding: 10px 50px;
+    }
+
+    .card::after {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    .card:hover {
+
+
+transform: scale(1.02, 1.02);
+-webkit-transform: scale(1.02, 1.02);
+backface-visibility: hidden; 
+will-change: transform;
+box-shadow: 0 1rem 3rem rgba(0,0,0,.75) !important;
+}
+
+.card:hover::after {
+opacity: 1;
+}
+
+.card:hover .btn-outline-primary{
+color:white;
+background:#ff0073;
+}
+
+.center-text {
+    text-align: center;
+  }
+
+
+  
+
+
+  </style>
+  </head>
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-scroll">
+      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#headline">Headliners</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#when">When</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#where">Where</a>
+            </li>
+            <div class="container-fluid d-flex justify-content-between">
+              <a class="navbar-brand" href="#toppage">
+                  <div class="logo-container">
+                      <img src="icon.PNG" alt="Antagonist Festival Logo" width="160" height="160">
+                      <div class="logo-overlay"></div>
+                  </div>
+              </a>
+          </div>
+            <li class="nav-item">
+              <a class="nav-link" href="#tickets">Tickets</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#!">Merchandise</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav> 
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="c1.jpg" alt="Crowd in front of a light show at a festival">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="c2.jpg" alt="Crowd in front of a light show at a festival">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="c3.jpg" alt="DJ set-up">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="c4.jpg" alt="Singer on stage, performing">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="c5.jpg" alt="DJ set-up">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="c6.jpg" alt="Guitarist performing on stage">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div> 
+  </header>
+
+
+
+
+<body>
+  <br><br>
+    <h1 id="toppage">ANTAGONIST FESTIVAL</h1>
+    <br><br>
+    <h2>About Us</h2>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Welcome to Antagonist Festival, where music meets self-discovery in a unique and unapologetic celebration of the human experience. Antagonist is not just a festival; it's an immersive journey into the depths of our psyche, where pop, hyperpop, trap, R&B, and techno provide the soundtrack to your personal transformation.<br>
+      
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      This is a judgment-free zone. Antagonist invites you to shed the societal expectations and be the villain if you wish. Let the music pulse through you, allowing the beats to unearth aspects of yourself that you may not have acknowledged before. It's a cathartic experience where you can confront your inner antagonist, embracing the complexities that make you human.
+      
+      But here's the twist - as the music reverberates through the festival grounds, we encourage you to leave these shadows behind within the gates of Antagonist. In this space, you have the freedom to explore the depths of your being, knowing that you won't be judged for being the antagonist in your own story.
+      
+      Antagonist is not just about indulgence; it's about transformation. As you dance to the beats that mirror the rhythm of your own heart, let this festival be a catalyst for change. Leave the bad qualities, the inner villains, behind and emerge from Antagonist as the hero of your own narrative.<br><br>
+      
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Join us at Antagonist, where the music, the experience, and the community come together to redefine what it means to be human. Embrace the antagonist within, and let the festival be your stage for self-discovery and growth. After all, at Antagonist, we believe that in confronting our shadows, we find the light that makes us truly heroic.
+    </p>
+    <br><br><br><br><br>
+    <h2 id="headline">Meet our Headliners</h2>
+    <div class="container">
+      <div class="row">
+          <div class="col-sm-4">
+              <h3>Narcissist Stage</h3>
+              <p>Playboi Carti<br>
+                 Lil Uzi Vert<br>
+                 City Morgue<br>
+              </p>
+          </div>
+          <div class="col-sm-4">
+              <h3>Arrogant Stage</h3>
+              <p>Danny Brown<br>
+                 JPEGMAFIA<br>
+                 Brockhampton
+              </p>
+          </div>
+          <div class="col-sm-4">
+              <h3>Vanity Stage</h3>
+              <p>Charli XCX<br>
+                 Death Grips<br>
+                 100 gecs + Special Guests: Bladee & Ecco2k
+              </p>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-sm-4">
+              <h3>Wrathful Stage</h3>
+              <p>Future<br>
+                 Young Thug<br>
+                 Pusha T 
+              </p>
+          </div>
+          <div class="col-sm-4">
+              <h3>Mischevious Stage</h3>
+              <p>Kendrick Lamar<br>
+                 21 Savage<br>
+                 Lil Wayne
+              </p>
+          </div>
+          <div class="col-sm-4">
+              <h3>Lust Stage</h3>
+              <p>Carly Rae Jepsen<br>
+                 Dua Lipa<br>
+                 Olivia Rodrigo + Opening Act: Paramore<br>
+                 
+              </p>
+          </div>
+      </div>
+  </div>
+  <br><br><br><br><br><br>
+  <div class="center-text">
+    <h2 id="when">When?</h2><br>
+    <p style="font-size: 40px; font-weight: bold;">6-9 AUGUST 2024</p>
+  </div>
+  <br><br><br><br><br><br>
+  <div class="center-text">
+    <h2 id="where">Where?</h2><br>
+    <p style="font-size: 30px; font-weight: bold;">Aleea Stadionului 2<br> Cluj-Napoca 400375<br> Cluj<br> Romania</p>
+  </div>
+  <br><br><br>
+  
+  <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px; margin: 0 auto;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2732.810354224928!2d23.56912717623483!3d46.768634471125324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490e8f6ad87633%3A0x23f7c32408a471a4!2sCluj%20Arena!5e0!3m2!1sen!2sro!4v1705519908209!5m2!1sen!2sro" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <br><br><br><br><br><br>
+  
+  <div class="center-text">
+    <h2 id="tickets">Tickets</h2>
+  </div>
+<div class="container-fluid" style="background: linear-gradient(90deg, #84153d 0%, #050102 100%);">
+  <div class="container p-5">
+    <div class="row">
+      <div class="col-lg-4 col-md-12 mb-4">
+        <div class="card h-100 shadow-lg">
+          <div class="card-body">
+            <div class="text-center p-3">
+              <h5 class="card-title">Youth 21</h5>
+              <small>General Acces</small>
+              <br><br>
+              <span class="h2">$99</span>
+              <br><br>
+            </div>
+            <p class="card-text">Under 21 years old and ready to party? We got you covered. Get your ticket at a super price!</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+              <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+            </svg> 4 Days Access</li>
+            <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+              <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+            </svg> Basic Services</li>
+          </ul>
+          <div class="card-body text-center">
+            <button class="btn btn-outline-primary btn-lg" style="border-radius:30px">Select</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12 mb-4">
+        <div class="card h-100 shadow-lg">
+          <div class="card-body">
+            <div class="text-center p-3">
+              <h5 class="card-title">The Basic</h5>
+              <small>General Access</small>
+              <br><br>
+              <span class="h2">$170</span>
+              <br><br>
+            </div>
+            <p class="card-text">Get the full festival experience! Be part of something bigger than you and become the life of the party alongside everyone! </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+              <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+            </svg> 4 Day Access</li>
+            <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+              <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+            </svg> Basic Services</li>
+            <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+              <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+            </svg> No age verification upon check-in</li>
+          </ul>
+          <div class="card-body text-center">
+            <button class="btn btn-outline-primary btn-lg" style="border-radius:30px">Select</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12 mb-4">
+        <div class="card h-100 shadow-lg">
+          <div class="card-body">
+            <div class="text-center p-3">
+              <h5 class="card-title">VIP</h5>
+              <small>VIP Access</small>
+              <br><br>
+              <span class="h2">$300</span>
+              <br><br>
+            </div>
+            <p class="card-text">Live your life to the fullest! Upgrade now to enjoy a premium, carefully curated experience just for you!</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+              <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+            </svg> $ Day Access + Afterparty</li>
+            <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+              <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+            </svg> Premium Services</li>
+            <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+              <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+            </svg> Special fast lanes and sitting areas</li>
+          </ul>
+          <div class="card-body text-center">
+            <button class="btn btn-outline-primary btn-lg" style="border-radius:30px">Select</button>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </div>
+  <br><br>
+  <h2 id="contact">Costumer support and Help</h2>
+  <br>
+  <p> Before contacting us, please check for a solution to your problem in our most asked questions.
+    If you still need help, don't hesitate to message us on our socials or fill out the contact form.</p>
+    <br><h3>FAQ</h3>
+  <p>
+    1. Can I upgrade my ticket after purchase?<br>
+    Yes, you can upgrade your ticket any time after purchase, but no later than 2 weeks before the festival. However, you cannot downgrade. <br>
+    <br>
+    2. Can I bring medicine inside the festival?<br>
+    Bringing medicine on the festival grounds is only allowed along with a prescription from your doctor. You shouldn't bring more than what was prescribed, otherwise our security will seize any extra amount. You must keep a copy of your prescription with you at all times during the festival to avoid unnecessary controls.
+    <br><br>
+    3. Can I delete or edit my check-in?<br>
+    Yes, but no later than 1 month after purchase. Otherwise, will you have to check-in at the gate and pay the 25$ fee. 
+    <br><br>
+    4. Can I bring my pet with me?<br>
+    We would not recommend exposing your furry friend to such loud music and big crowds. It might make them nervous, scared or agitated. The decision of bringing your pet is yours, don't forget their leash and a GPS collar so they don'y get lost.</p>
+  <br><br><h3>Contact Form</h3>
+  <br> <form>
+    <div class="form-group">
+      <label for="formGroupExampleInput">E-mail</label>
+      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="johnappleseed@example.com">
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput2">How can we help you?</label>
+      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="State your issue...">
+    </div>
+  </form>
+  <br><br>
+
+    
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        
+ </body>
+
+ <footer class="text-center black-footer">
+  <div class="container pt-4">
+      <section class="mb-4">
+          <a class="btn-floating btn-lg social-btn facebook" href="https://www.facebook.com/adicindrea/" role="button"
+              data-mdb-ripple-color="dark">
+              <i class="fab fa-facebook-f" style="color: #1877f2;"></i>
+          </a>
+          <a class="btn-floating btn-lg social-btn twitter" href="https://www.twitter.com/adicindrea/" role="button"
+              data-mdb-ripple-color="dark">
+              <i class="fab fa-twitter" style="color: #1da1f2;"></i>
+          </a>
+          <a class="btn-floating btn-lg social-btn instagram" href="https://www.instagram.com/adicindrea/" role="button"
+              data-mdb-ripple-color="dark">
+              <i class="fab fa-instagram" style="color: #e4405f;"></i>
+          </a>
+      </section>
+  </div>
+  <div class="text-center p-3" style="background-color: black; color: white;">
+      © 2024 Antagonist Festival - All Rights Reserved
+  </div>
+</footer>
+
+
+</html>
